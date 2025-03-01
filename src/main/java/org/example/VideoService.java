@@ -16,6 +16,7 @@ public class VideoService {
     public VideoService(RepositoryInt videoRepository,@Qualifier("education") Playlisting playlisting) {
         this.videoRepository = videoRepository;
         this.playlisting = playlisting;
+        System.out.println("VideoService created");
     }
     public void pushVideo(Video video) {
         System.out.println("publishing video "+video.getUrl()+" by "+video.getAuthor());
