@@ -5,7 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
-
+        System.out.println("Eager created");
         VideoService videoService = context.getBean(VideoService.class);
         VideoService gamingVideoServ = context.getBean("gamingvideo",VideoService.class);
 
